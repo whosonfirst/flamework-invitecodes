@@ -1,6 +1,6 @@
 #!/bin/sh
 
-WHOAMI=`readlink -f $0`
+WHOAMI=`python -c 'import os, sys; print os.path.realpath(sys.argv[1])' $0`
 WHEREAMI=`dirname $WHOAMI`
 INVITE_APP=`dirname $WHEREAMI`
 
